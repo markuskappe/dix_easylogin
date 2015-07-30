@@ -1,0 +1,64 @@
+{namespace h=Tx_Dix_ViewHelpers}
+
+<f:if condition="{values.error}">
+	<p style='color: red'><b>{values.error}</b></p>
+</f:if>
+<div id="tabs">
+	<ul>
+		<f:for each="{values.provider}" as="provider" key="type">
+			<f:if condition="{provider.showMe}" >
+				<li><a href="{values.anchorPrefix}#tabs-{type}">
+					<f:if condition="{provider.icon}">
+						<img src="{provider.icon}" title="{provider.name}" alt="{provider.name}" />
+					</f:if>
+					{provider.name}
+				</a></li>
+			</f:if>
+		</f:for>
+	</ul>
+	<f:for each="{values.provider}" as="provider" key="type">
+		<f:if condition="{provider.showMe}" >
+			<div id="tabs-{type}">
+				<f:if condition="{provider.type} == {values.constants.CONTENTELEMENT}">
+					<f:then>{provider.content}</f:then>
+					<f:else>
+						<form action="{values.formaction}" method="post">
+							<input type="hidden" name="{values.prefix}[loginType]" id="loginType" value="{type}" />
+							<input type="hidden" name="{values.prefix}[process]" value="1" />
+							<f:if condition="{provider.withUsername}">
+								Username: <input type="text" name="{values.prefix}[userName]" /><br />
+							</f:if>
+
+							<f:if condition="{values.user}">
+								<f:then>
+									<f:if condition="{h:disp(obj: values.associated, prop: type)}">
+										<f:then>
+											<p>Already connected</p>
+											<input type="submit" value="Update connection with {provider.name} account" class="login-button login-button-{type}" />
+										</f:then>
+										<f:else>
+											<input type="submit" value="Connect with {provider.name} account" class="login-button login-button-{type}" />
+										</f:else>
+									</f:if>
+								</f:then>
+								<f:else>
+									<input type="submit" value="Login with {provider.name}" class="login-button login-button-{type}" />
+								</f:else>
+							</f:if>
+
+
+						</form>
+					</f:else>
+				</f:if>
+			</div>
+		</f:if>
+	</f:for>
+</div>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+	$( "#tabs" ).tabs();
+});
+</script>
+<!-- your verifyUrl is {values.verifyUrl} -->

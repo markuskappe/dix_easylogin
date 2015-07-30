@@ -1,0 +1,65 @@
+plugin.tx_dixeasylogin_pi1 {
+		# if jQuery, jQueryUI and the lightness theme should be included by default. 
+		# if turned off, you have to take care for yourself that the libraries are loaded (smart if other extensions also include jQuery)
+	include_jQuery = 1
+
+		# if the user should be created when not already found in the database
+	allowCreate = 1
+
+		# create user only if email address matches this domain(s). e.g. "example.com, *.mycompany.org"
+	trustedDomains = *
+	
+		# if the user should be able to connect his login with a login provider when already authenticated
+	allowUpdate = 1
+
+		# where the fe_users records should be stored when created
+	user_pid = 6
+	
+		# when a user is created, he will get this usergroup(s)
+	usergroup = 1
+	
+		# page where the "easylogin" plugin is located
+		# used for the xrds definition
+	pid_loginPage = 21
+	
+		# uid of the common login
+	uid_felogin = 10
+	
+		# register a facebook app to get these two values
+	facebook_appID = YOUR-APP-ID
+	facebook_appSecret = YOUR-APP-SECRET
+	
+		# record type of newly created fe_user records (e.g. Tx_Extbase_Domain_Model_FrontendUser )
+	extbaseType =
+
+		# register a twitter app to get these two values
+	twitter_consumerKey = YOUR-CONSUMER-KEY
+	twitter_consumerSecret = YOUR-CONSUMER-SECRET
+
+		# register a xing app to get these two values
+	xing_consumerKey = YOUR-CONSUMER-KEY
+	xing_consumerSecret = YOUR-CONSUMER-SECRET
+
+		# register a linkedin app to get these two values
+	linkedin_consumerKey = YOUR-CONSUMER-KEY
+	linkedin_consumerSecret = YOUR-CONSUMER-SECRET
+
+		# register a google app to get these two values
+	google_clientID = YOUR-CONSUMER-KEY
+	google_clientSecret = YOUR-CONSUMER-SECRET
+
+	
+		# enable or disable login methods
+	disable.felogin = 0
+	disable.google = 1
+	disable.yahoo = 0
+	disable.myopenid = 0
+	disable.wordpress = 0
+	disable.facebook = 0
+	disable.facebook_oauth2 = 1
+	disable.twitter = 0
+	disable.xing = 0
+	disable.linkedin = 0
+	disable.google_oauth2 = 0
+	
+}

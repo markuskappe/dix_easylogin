@@ -1,0 +1,83 @@
+0.4.2
+2015-04-03 Markus Kappe  <markus.kappe@dix.at>
+	* Compatibility: only 6.2.x is supported for now
+	* Feature: trusted domains for registering
+	* Disabled Google OpenID by default - it will be shut down on April 20th 2015 (see https://developers.google.com/accounts/docs/OpenID#shutdown-timetable)
+	* Enabled Google OAuth 2.0 by default
+	* Added configuration for extbaseType (https://forge.typo3.org/issues/53551)
+	* Bugfix (https://forge.typo3.org/issues/65724)
+	* Manual Update (https://forge.typo3.org/issues/44641 , 44642, 44640, 45222, 48973, 48972, 49010)
+	* Feature: Re-connect (https://forge.typo3.org/issues/44792)
+
+0.4.1
+2014-07-17 Markus Kappe  <markus.kappe@dix.at>
+	* Bugfix: proper encoding of &amp; in URLs
+	* cURL finetuning
+	* Thanks to ephraim@mokom01.com for reporting and fixing
+
+0.4.0
+2014-06-28 Markus Kappe  <markus.kappe@dix.at>
+	* Changed compatibility to 6.2.x
+	* Added OAuth 2.0 support.
+	* Added facebook with OAuth2 sample configuration (preferred over facebook native) (disabled by default)
+	* Added Google with OAuth2 sample configuration (preferred over OpenID) (disabled by default)
+	* Added Linkedin sample configuration (enabled by default)
+	* Added Bugfix for NULL values in fe_user on mandatory fields
+
+0.3.3
+2013-11-26 Markus Kappe  <markus.kappe@dix.at>
+	* Changed compatibility to 6.1.x
+	* Make use of Twitter API 1.1 (instead of 1.0) - Thanx to o.koller@postmail.ch for helping with that
+
+0.3.2
+2013-02-06 Markus Kappe  <markus.kappe@dix.at>
+	* Added hook $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['dix_easylogin']['hook_userInfo'] for processing user info before logging in
+
+0.3.1
+2013-01-16 Markus Kappe  <markus.kappe@dix.at>
+	* Bugfix with update script (updated only 1 row)
+	* Changed compatibility to 4.7.x
+
+0.3.0
+2013-01-15 Markus Kappe  <markus.kappe@dix.at>
+	* new jQuery + UI version 
+	* jQuery UI theme changed from lighness to base
+	* Inclusion of jQuery via includeJSlibs instead of headerData
+	* Bugfix: href of tabs was incorrect and did not work with new version of jQuery
+	* Label of extension configuration re-texted for understandability
+	* Added Xing
+	* Some bugfixes and	changes on OAuth1 for Xing to work
+	* made fe_users username lowercase, noSpace, uniqueInPid
+	* Enabled connecting user to multiple providers (http://forge.typo3.org/issues/34990)
+	* Display if you are already connected to a provider
+	* Update script due to database changes
+
+2012-03-14 Markus Kappe  <markus.kappe@dix.at>
+	* http://forge.typo3.org/issues/34440 (realurl autoconf)
+	* http://forge.typo3.org/issues/33404 (preserveGETvars)
+
+2012-03-03 Markus Kappe  <markus.kappe@dix.at>
+	* Security fix
+
+2012-02-27 Markus Kappe  <markus.kappe@dix.at>
+	* http://forge.typo3.org/issues/33500
+	* http://forge.typo3.org/issues/33498
+	* http://forge.typo3.org/issues/33405
+
+2012-01-12 Markus Kappe  <markus.kappe@dix.at>
+	* Redirect according to settings from felogin
+	* moved TS to static template	
+
+2011-12-13 Markus Kappe  <markus.kappe@dix.at>
+	* minor corrections in the manual
+
+2011-12-12 Markus Kappe  <markus.kappe@dix.at>
+	* changed error message "nouser"
+	* bugfix with disabling authentication methods. renamed TS constant "method" to "disable" (with inverse logic)
+
+2011-12-07 Markus Kappe  <markus.kappe@dix.at>
+	* worked on the code, changed TS configuration completly! When you try to upgrade, you better delete your TS and start over
+	* added OAuth with twitter as an working example	
+
+2011-11-11 Markus Kappe  <markus.kappe@dix.at>
+	* initial code generated with kickstarter

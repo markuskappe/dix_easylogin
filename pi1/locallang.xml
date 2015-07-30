@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_dixeasylogin_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="invalid_url">Error: OpenID URL is not in proper format (%s)</label>
+			<label index="error_endpoint">Error while getting OpenID endpoint (%s): %s</label>
+			<label index="nouser">User not found. Please contact the admin of the website to request access to this site. Tell the admin this identifier: %s</label>
+			<label index="error_validate">Error while validating OpenID (%s): %s</label>
+			<label index="error_oauth2_validate">Error while validating OpenID (%s)</label>
+			<label index="error_validate_nocode">Error while validating OpenID %s</label>
+			<label index="error_validate_fb_nocode">Error while validating facebook code-parameter '%s' (no answer)</label>
+			<label index="error_validate_fb">Error while validating facebook code-parameter (%s: %s)</label>
+			<label index="error_fb_token">Error: could not retrieve access_token</label>
+			<label index="error_token">Error: could not retrieve access_token</label>
+			<label index="qmark_in_url">You got a configuration error: The verification URL %s contains a question mark. Facebook can't handle this. Use realurl or cooluri to get rid of that nagging character (default configuration for realurl included in ext_localconf.php within the dix_easylogin extension), or remove some variables from the TypoScript option "preserveGETvars".</label>
+			<label index="error_validate_fb_token">Error while validating facebook token-parameter (%s: %s)</label>
+			<label index="error_validate_token">Error while validating token-parameter (%s: %s)</label>
+			<label index="error_reqToken">Error while getting OAuth Request Token (%s)</label>
+			<label index="error_getting_accesstoken">Error: Could not get access token (%s)</label>
+			<label index="error_getting_userinfo">Error: While retrieving user details, the user id was empty</label>
+			<label index="connect_success">Account successfully connected!</label>
+
+			<label index="xxx">Mode</label>
+			<label index="xxx">Mode</label>
+		</languageKey>
+	</data>
+</T3locallang>
